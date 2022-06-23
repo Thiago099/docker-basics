@@ -25,11 +25,6 @@ docker rm container_id --force
 docker image ls 
 
 
-// create image
-docker build . -t hello-world:1.0.2
-
-
-
 // bind mount "bind docker "
 docker run --name=ubunto -it -v C:\Users\usuario\Documents\:/app -p 8080:80 ubuntu:latest bash
 
