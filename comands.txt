@@ -27,3 +27,8 @@ docker image ls
 
 // create image
 docker build . -t hello-world:1.0.2
+
+
+
+// bind mount "bind docker "
+docker run -it -v C:\Users\usuario\Documents\:/app -p 8080:80 ubuntu:latest bash
