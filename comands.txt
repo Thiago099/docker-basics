@@ -1,0 +1,29 @@
+// USE existing image
+docker pull ubunto
+docker run python:3
+docker run -it python:3 bash
+//keep alive
+docker run -d python:3 
+docker run -d -P python:3 any port
+//port
+docker run -d -p 8080:80 python:3 
+
+
+//see open ports
+docker port container_id 
+docker stop -t=0 python:3
+//to see containeres
+docker ps 
+// to see stoped containers
+docker ps -a
+docker pause container_id
+docker unpause container_id
+docker rm container_id to remove
+docker rm container_id --force
+
+// see all images
+docker image ls 
+
+
+// create image
+docker build . -t hello-world:1.0.2
