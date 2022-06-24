@@ -30,11 +30,17 @@ docker run --name=ubunto -it -v C:\Users\usuario\Documents\:/app -p 8080:80 ubun
 
 
 
-// criar bridge
+// create bridge
 
 docker network create --driver bridge my-bridge
 docker run -it --name=ubuntu --network my-bridge ubuntu:latest bash
 
+// create volume
+docker volume create hello
+
+docker run -d -v hello:/world busybox ls /world
+
 
 
 docker run -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql -d -p 3306:3306 mysql
+
