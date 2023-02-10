@@ -47,6 +47,8 @@ docker run -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql -d -p 3306:3306 mysql
 
 docker run -e MYSQL_ROOT_PASSWORD=mysqlpassword --name mysql -d -p 3306:3306 mysql:8.0.21
 
+docker run -e  MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql-stayfilm -d -p 3306:3306 mysql:8.0.28
+
 
 docker run -d -it --name dotnet6.0 --network host -v /application:/application mcr.microsoft.com/dotnet/sdk:6.0
 docker exec -it dotnet6.0 bash
